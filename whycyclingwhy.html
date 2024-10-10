@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>whycyclingwhy</title>
+<script type="module" src="./assets/components/html-css-viewer.js"></script>
+<style>
+    html {
+        width: 100%;
+    }
+    /*body{
+       
+         width: 100%;
+        overflow-x: hidden; 
+    } */
+
+    :root{
+        --orange: #FF885B;
+        --pink: #FFE5CF;
+        --green: #557C56;
+        --dark_green: #33372C;
+        --light_green: #A0D683;
+        --yellow: #FEFF9F;
+    }
+
+    h1{
+        
+    }
+    .circle1{
+        position: relative;
+        aspect-ratio: 1;
+        animation:8s pyöriminen infinite linear;
+        transform-origin:center;
+        height:310px;
+        width: 176.23px;
+        padding: 0%;
+    
+    }
+
+    .circle1 img{
+        position: absolute;
+        top: 5px;
+        height: 300px;
+    }
+
+    .pedal img{
+        position: absolute;
+        left: 50px;
+        top: 280px;
+        height: 30px;
+        animation:8s pyöriminen_pedal infinite linear; 
+    }
+
+    .pedal2 img{
+        position: absolute;
+        left: 50px;
+        top: 0px;
+        height: 30px;
+        animation:8s pyöriminen_pedal infinite linear;  
+    }
+
+    .animation{
+        display: flex;
+        justify-content: center;
+        padding-top: 150px;
+    }
+
+
+    @keyframes pyöriminen {
+        from{
+            transform: rotateZ(0);
+        }
+        to{
+            transform: rotateZ(360deg);
+        }
+    }
+
+
+    @keyframes pyöriminen2 {
+        from{
+            transform: rotateZ(0);
+        }
+        to{
+            transform: rotateZ(-360deg);
+        } 
+    }
+
+
+    @keyframes pyöriminen_pedal {
+        from{
+            transform: rotateZ(0);
+        }
+        to{
+            transform: rotateZ(-360deg);
+        } 
+    }
+
+
+    .ode{
+        position:relative;
+        z-index: 200;
+        left: 0px;
+        display: flex;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+        box-shadow: 0px 0px 50px 0px rgb(37, 116, 0);
+        margin: 0;
+        padding: 0%;
+        background-color: aliceblue; 
+    }
+
+    .ode_list{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .ode_list li{
+        white-space: nowrap;
+        padding: 10px 24px;
+        color: #494949;
+        position: relative;
+        animation: scroll 81s infinite linear; 
+    }
+
+    .ode_list li::after{
+        width: 1px;
+        height: 100%;
+        background: #b8b8b8;
+        position:relative;
+        top: 0;
+        right:0;
+    }
+    .ode_list li:last-child::after{
+        display: none;
+    }
+
+    .ode_audio{
+        display: flex;
+        justify-content: right;
+    }
+
+    .Draisine{
+        padding: 0px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .Draisine_human{
+        position: relative;
+        margin-right: 100px;
+        
+    }
+
+    .koleso3 {
+        height: 136px;
+        position: absolute;
+        z-index: 1;
+        animation: 8s pyöriminen2 infinite linear;
+        bottom:40px;
+        left: 45px;
+      
+    }
+
+    .koleso4 {
+        height: 136px;
+        position: absolute;
+        z-index: -1;
+        animation: 8s pyöriminen2 infinite linear;
+        bottom: 40px;
+        right: -40px;
+       
+       
+    }
+
+    .Draisine_text{
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex-direction: column;  
+        margin-top: 210px;
+    }
+    .Draisine_text p{
+        position: relative;
+        width: 300px;
+        margin: 0;
+    }
+
+    
+    .Draisine_circle2{
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .Draisine_circle{
+        width: 1500px;
+        height: 1500px;
+        border-radius:50%;
+        z-index: -2;
+        position: absolute;
+        top: -405px;
+        
+        animation: 8s pyöriminen infinite linear;
+        background-image: 
+        radial-gradient(
+            transparent 190px,
+            aliceblue 190px,
+            aliceblue 400px,
+            var(--green)400px,
+            var(--light_green) 410px,
+            var(--light_green)430px,
+            transparent 500px),
+        conic-gradient(
+            var(--pink) 45deg, 
+            var(--yellow) 45deg,
+            var(--yellow) 90deg,
+            var(--pink) 90deg, 
+            var(--pink) 135deg,
+            var(--yellow) 135deg,
+            var(--yellow) 180deg,
+            var(--pink) 180deg, 
+            var(--pink) 225deg,
+            var(--yellow) 225deg,
+            var(--yellow) 270deg,
+            var(--pink) 270deg, 
+            var(--pink) 315deg,
+            var(--yellow) 315deg,
+            var(--yellow) 360deg
+        );
+        
+    }
+
+    .Dr_nul{
+        height: 750px;
+    }
+    .Velocipede{
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .Velocipede p{
+        position: relative;
+        width: 400px;
+        margin:0;
+        
+    }
+
+
+    .Penny-Farthing{
+        
+        top: 955px;
+        left: 0px;
+        display: flex;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+        box-shadow: 0px 0px 50px 0px rgb(37, 116, 0);
+        margin: 0;
+        background-color: aliceblue;
+    }
+    .Penny-Farthing p{
+        align-items: center;
+        margin: 0;
+        padding: 0px;
+        white-space: nowrap;
+        padding: 10px 24px;
+        position: relative;
+        animation: scroll 80s infinite linear;
+        
+    }
+
+    @keyframes scroll{
+        from{
+            transform: translateX(100%);
+        }
+        to{
+            transform: translateX(-10000px);
+        }
+    }
+
+    .cyclist{
+        position: relative;
+        top: 300px;
+    }
+
+    .big_koleso img{
+        height: 250px;
+        position: relative;
+        top: -296px;
+        left: 150px;
+        z-index: -1;
+        animation: 8s pyöriminen infinite linear;
+
+    }
+
+    .small_koleso img{
+        height: 75px;
+        position: relative;
+        top: -375px;
+        left: 53px;
+        animation: 2.4s pyöriminen infinite linear;
+    }
+
+    .cyclists{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+       
+        
+    }
+
+
+
+
+ 
+    </style>
+</head>
+
+<body>
+
+    <h1> Why cycling, why?</h1>
+
+    <div class="animation">
+    
+        <div class="circle1">
+            <img src="assets/1x/everything2.webp">
+            <div class="pedal">
+                <img src="assets/1x/cycling_animation.webp">
+        
+            </div>
+
+            <div class="pedal2">
+                <img src="assets/1x/cycling_animation.webp">
+        
+            </div>
+
+        </div>
+    </div>
+
+    
+    <audio controls loop>
+        <source src="assets/audio/click2.mp3">
+    </audio>
+    
+    <div class="ode">
+        
+        <ul class="ode_list"> 
+            <li>O cycling, swift and free as the wind,  
+                Upon your two-wheeled steed, journeys begin,  
+                Through city streets, or paths less known,  
+                You carry us far, yet we call it home. </li>
+            <li>Your rhythmic hum, the chain`s soft glide,  
+                Pedals turn as we soar and slide.  
+                The world rushes by in a colorful blur,  
+                With each spinning spoke, our spirits stir.</li>
+            <li>Mountains you conquer, hills you ascend,  
+                On quiet roads that seem to never end.  
+                You whisper of freedom, adventure, and flight,  
+                In the golden dawn or soft twilight.</li>
+            <li>Oh, the pulse of the heart, the breath in the air,  
+                The road below, the world stripped bare.  
+                Each mile a triumph, each ride a song,  
+                With you, dear cycling, we feel we belong.</li>
+            <li>Through valleys of green, by rivers that gleam,  
+                In the solitude of a rider´s dream.  
+                You carry our thoughts, our hopes, our fears,  
+                Through moments of joy, or moments of tears.</li>
+            <li>With every turn, with every climb,  
+                We dance with the earth, we measure time.  
+                O cycling, boundless, bold, and bright,  
+                You bring us peace in the morning light.</li>
+            <li>So let us ride, with wheels in flight,  
+                Beneath the sun, the stars, the night.  
+                For in your freedom, we find our own,  
+                O cycling, you are where we’ve grown.</li>-->
+        </ul>
+    </div>
+
+    <div class="ode_audio">
+        <audio controls>
+            <source src="assets/audio/ode.mp3">
+        </audio>
+    </div>
+    
+
+    <div class="Draisine">
+        <div class="Draisine_human">
+            <img src="assets/1x/The-Draisine.webp" alt="">
+            <img class="koleso4" src="assets/1x/koleso3.webp" alt="">
+            <img class="koleso3" src="assets/1x/koleso3.webp" alt="">
+        </div>
+    </div>
+
+    
+    <div class="Draisine_circle2">
+        <div class="Draisine_circle"></div>
+    </div>
+    
+    <div class="Draisine_text">
+        <h2> Draisine 1817 </h2>
+        <p>
+            The precursor to the bicycle, the Draisine, was invented by German Baron Karl von Drais. It was a wooden, two-wheeled, steerable machine without pedals, powered by the rider pushing their feet against the ground. This invention, also known as the “Laufmaschine” or “running machine,” was the first two-wheeled vehicle for personal transportation.
+        </p>
+    </div>
+
+
+    <div class="Dr_nul"></div>
+
+    <div class="Velocipede">
+       
+       <h2>Velocipede 1860</h2>
+       <p>
+            In the 1860s, French inventors Pierre and Ernest Michaux developed the first pedal-powered bicycle, known as the Velocipede or “boneshaker.” The pedals were attached directly to the front wheel, and it was made of metal and wood. Due to the rough roads of the time, it earned the nickname “boneshaker” for its uncomfortable ride.
+        </p>
+        
+    </div>
+
+    
+        
+    <div class="cyclists">
+
+        <div class="cyclist"> 
+            <div class= "human">
+                <img src="assets/1x/Untitled-1.webp">
+            </div>
+            
+            <div class="big_koleso">
+                <img src="assets/1x/big_koleso.webp">
+            </div>
+            
+            <div class="small_koleso">
+                <img src="assets/1x/small_koleso.webp">
+            </div>
+            
+        </div>
+        
+        <div class="cyclist"> 
+            <div class= "human">
+                <img src="assets/1x/Untitled-1.webp">
+            </div>
+            
+            <div class="big_koleso">
+                <img src="assets/1x/big_koleso.webp">
+            </div>
+            
+            <div class="small_koleso">
+                <img src="assets/1x/small_koleso.webp">
+            </div>
+            
+        </div>
+
+        
+    </div>
+
+    <div class="Penny-Farthing">
+
+        <p>
+            The 1870s saw the rise of the Penny-Farthing, a bicycle with a large front wheel and a much smaller rear wheel. Its design allowed for greater speeds, but it was unstable and difficult to mount and dismount, leading to frequent accidents. This design, though short-lived, became an iconic symbol of early cycling.</p>
+        </p>
+    </div>
+
+    <p>
+        Total energy use for bicycling- food, bicycle manufacture and sale, 
+        repaire and maintrnance, tires and bikeway truction - amounts to about 
+        1,300 Btu/mile. The comble figure for urban automobile travel is 11,000 Btu/passenger-mile
+        for trips of five miles or less. Thus a shift from cars to bicycles would save about 10,000 Btu/passenger-mile,
+        a 90% reduction from the energy use for automobiles. 
+        If 10 % of the urban auto travel conducted during daylight and in good weather for trips of five miles or less was shifted to 
+        bicycles, the savings in 1971 would have been 180 trillion Btu, 1.8% total urban automobile energy use. 
+    </p>
+
+
+
+</body>
+</html>
