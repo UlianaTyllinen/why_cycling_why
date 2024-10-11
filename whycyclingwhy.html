@@ -4,15 +4,21 @@
 <meta charset="UTF-8">
 <title>whycyclingwhy</title>
 <script type="module" src="./assets/components/html-css-viewer.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <style>
     html {
         width: 100%;
     }
-    /*body{
+    body{
        
          width: 100%;
         overflow-x: hidden; 
-    } */
+       
+    } 
 
     :root{
         --orange: #FF885B;
@@ -21,10 +27,31 @@
         --dark_green: #33372C;
         --light_green: #A0D683;
         --yellow: #FEFF9F;
+        --grey: #494949;
+    }
+    .otsikko1{
+        display: flex;
+        justify-content: center;
+        background-color: #A0D683;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        
+    }
+    .otsikko2{
+        margin-top: 0;
+        padding-top: 0;
+        display: flex;
+        justify-content: center;
+        background-color: #A0D683;
     }
 
+    .otsikko2 h2{
+        color: white;
+    }
     h1{
-        
+        font-family: "Bungee Spice", sans-serif;
+        font-size: 80pt;
+        text-shadow: 5px 5px 0px #8c8c8c;
     }
     .circle1{
         position: relative;
@@ -62,7 +89,9 @@
     .animation{
         display: flex;
         justify-content: center;
-        padding-top: 150px;
+        padding: 30px;
+        padding-bottom: 50px;
+    
     }
 
 
@@ -95,6 +124,12 @@
         } 
     }
 
+    h2{
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+
 
     .ode{
         position:relative;
@@ -125,6 +160,9 @@
         padding: 10px 24px;
         color: #494949;
         position: relative;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
         animation: scroll 81s infinite linear; 
     }
 
@@ -142,7 +180,7 @@
 
     .ode_audio{
         display: flex;
-        justify-content: right;
+        justify-content: space-between;
     }
 
     .Draisine{
@@ -150,10 +188,11 @@
         position: relative;
         display: flex;
         justify-content: center;
+        top: 10px;
     }
     .Draisine_human{
         position: relative;
-        margin-right: 100px;
+        margin-right: 85px;
         
     }
 
@@ -161,7 +200,7 @@
         height: 136px;
         position: absolute;
         z-index: 1;
-        animation: 8s pyöriminen2 infinite linear;
+        animation: 3s pyöriminen2 infinite linear;
         bottom:40px;
         left: 45px;
       
@@ -171,11 +210,9 @@
         height: 136px;
         position: absolute;
         z-index: -1;
-        animation: 8s pyöriminen2 infinite linear;
+        animation: 3s pyöriminen2 infinite linear;
         bottom: 40px;
         right: -40px;
-       
-       
     }
 
     .Draisine_text{
@@ -183,12 +220,16 @@
         align-items: center;
         position: relative;
         flex-direction: column;  
-        margin-top: 210px;
+        margin-top: 160px;
+        margin-left: 25px;
     }
     .Draisine_text p{
         position: relative;
         width: 300px;
         margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
     }
 
     
@@ -209,9 +250,9 @@
         animation: 8s pyöriminen infinite linear;
         background-image: 
         radial-gradient(
-            transparent 190px,
-            aliceblue 190px,
-            aliceblue 400px,
+            transparent 210px,
+            white 210px,
+            white 400px,
             var(--green)400px,
             var(--light_green) 410px,
             var(--light_green)430px,
@@ -237,45 +278,75 @@
     }
 
     .Dr_nul{
-        height: 750px;
+        height: 293px;
     }
     .Velocipede{
         display: flex;
         align-items: center;
         position: relative;
         flex-direction: column;
+        margin-left: 25px;
     }
 
     .Velocipede p{
         position: relative;
-        width: 400px;
-        margin:0;
+        width: 310px;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
         
     }
 
-
-    .Penny-Farthing{
-        
-        top: 955px;
-        left: 0px;
+    .Velocipede_pic{
         display: flex;
-        width: 100%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: larger;
-        box-shadow: 0px 0px 50px 0px rgb(37, 116, 0);
-        margin: 0;
-        background-color: aliceblue;
-    }
-    .Penny-Farthing p{
-        align-items: center;
-        margin: 0;
-        padding: 0px;
-        white-space: nowrap;
-        padding: 10px 24px;
+        justify-content: center;
         position: relative;
-        animation: scroll 80s infinite linear;
-        
     }
+
+    .Velocipede_pic2{
+        position: relative;
+    }
+
+    .koleso5{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        bottom: 64px;
+        right: -9px;
+        z-index: -1;
+    }
+    .koleso6{
+        position: absolute;
+        width: 230px;
+        height: 230px;
+        bottom: 66px;
+        left: -31px;
+        z-index: -1;
+        animation: 3s pyöriminen2 infinite linear;
+    }
+    
+
+    .PennyFarthing_text{
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex-direction: column;  
+        margin-left: 25px;
+    }
+    .PennyFarthing_text p{
+        position: relative;
+        width: 300px;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+    }
+
+
+    
+
+
 
     @keyframes scroll{
         from{
@@ -288,13 +359,17 @@
 
     .cyclist{
         position: relative;
-        top: 300px;
+        margin-top: 80px;
+    }
+
+    .Penny-Farthing_human{
+        position: absolute;
     }
 
     .big_koleso img{
         height: 250px;
-        position: relative;
-        top: -296px;
+        position: absolute;
+        bottom: 50px;
         left: 150px;
         z-index: -1;
         animation: 8s pyöriminen infinite linear;
@@ -303,8 +378,8 @@
 
     .small_koleso img{
         height: 75px;
-        position: relative;
-        top: -375px;
+        position: absolute;
+        bottom: 50px;
         left: 53px;
         animation: 2.4s pyöriminen infinite linear;
     }
@@ -312,43 +387,220 @@
     .cyclists{
         display: flex;
         justify-content: space-around;
-        margin-top: 30px;
        
+    }
+
+    .Penny-Farthing_bg{
+        position: relative;
+    
+    }
+
+    .Penny-Farthing_ruoho{
+        height: 450px;
+        width: 3000px;
+        position: absolute;
+        background-color: #494949;
+        top: -50px;
+        z-index: -1;
+        padding: 0%;
+        margin: 0%;
+        background-image: 
+        linear-gradient(
+        90deg, 
+        transparent 50%, 
+        white 50%),
+        linear-gradient(
+            transparent 50%,
+            white 50%);
+        background-size: 5rem 5rem;
+        opacity: 10%;
+        animation:scroll2 3s infinite linear; 
+    
         
     }
 
+    @keyframes scroll2{
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-400px);
+        }
+    }
 
 
+    .Safety_bicycle{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
 
- 
+    .Safety_bicycle_pic{
+        position: relative;
+        top:-80px;
+    }
+
+    .koleso7{
+        position: absolute;
+        bottom:18px;
+        left: -10px;
+        z-index: -1;
+        width: 448px;
+        height: 448px;
+        animation: 8s pyöriminen2 linear infinite;
+        
+    }
+    
+
+    .koleso8{
+        position: absolute;
+        bottom: 10px;
+        right: -5px;
+        z-index: -1;
+        width: 448px;
+        height: 448px;
+        animation: 8s pyöriminen2 linear infinite;
+    }
+
+    .Safety_bicycle_h1{
+        padding-top: 150px;
+        padding-left: 80px;
+        text-shadow: 5px 5px 0px #b8b8b8;
+        
+    }
+    .Safety_bicycle_text{
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+    }
+    .Safety_bicycle_text p{
+        position: relative;
+        width: 1000px;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        background-color: #FEFF9F;
+        padding: 30px;
+        border-radius: 30px;
+        box-shadow: 5px 5px 10px 0px #b8b8b8;
+        
+    }
+    
+    
+    .tires_h1{
+        text-shadow: 5px 5px 0px #b8b8b8;
+        padding-left: 80px;
+        padding-top: 80px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .tires_text{
+        position: relative;
+        display: flex;
+        justify-content: center;}
+
+    .tires_text p{
+        position: relative;
+        width: 1000px;
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        background-color: #FEFF9F;
+        padding: 30px;
+        border-radius: 30px;
+        box-shadow: 5px 5px 10px 0px #b8b8b8;
+        
+    }
+
+    .tire_pic{
+        position: relative;
+        display: flex;
+        justify-content: center;
+       
+    }
+    .tire_pic2{
+        position: absolute;
+        
+    }
+
+    .posada{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .posada img{
+        position: absolute;
+        width: 60%;
+    }
+
+    .posada_kolesa1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 5%;
+    }
+    
+    .posada_kolesa1 img{
+        width: 10%;
+        animation: 6s pyöriminen infinite;
+    }
+
+    .posada_kolesa2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        padding-bottom: 5%;
+       
+    }
+
+    .posada_kolesa2 img{
+        width: 10%;
+        animation: 6s pyöriminen infinite;
+    }
+
+    .posada_kolesa3{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        padding-bottom: 5%;
+    }
+
+    .posada_kolesa3 img{
+        width: 10%;
+        animation: 6s pyöriminen infinite;
+    }
+
+    .posada_all{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
     </style>
 </head>
 
 <body>
-
-    <h1> Why cycling, why?</h1>
-
-    <div class="animation">
-    
-        <div class="circle1">
-            <img src="assets/1x/everything2.webp">
-            <div class="pedal">
-                <img src="assets/1x/cycling_animation.webp">
-        
-            </div>
-
-            <div class="pedal2">
-                <img src="assets/1x/cycling_animation.webp">
-        
-            </div>
-
-        </div>
+    <div class="otsikko1">
+        <h1> Why cycling, why?</h1>
     </div>
-
-    
-    <audio controls loop>
-        <source src="assets/audio/click2.mp3">
-    </audio>
+        <div class="otsikko2">
+            <h2> History of bicycle</h2>
+        </div>
     
     <div class="ode">
         
@@ -380,7 +632,7 @@
             <li>So let us ride, with wheels in flight,  
                 Beneath the sun, the stars, the night.  
                 For in your freedom, we find our own,  
-                O cycling, you are where we’ve grown.</li>-->
+                O cycling, you are where we’ve grown.</li>
         </ul>
     </div>
 
@@ -388,8 +640,31 @@
         <audio controls>
             <source src="assets/audio/ode.mp3">
         </audio>
+        <audio controls loop>
+            <source src="assets/audio/click2.mp3">
+        </audio>
     </div>
     
+    
+
+
+    <div class="animation">
+        <div class="circle1">
+            <img src="assets/1x/everything2.webp">
+            <div class="pedal">
+                <img src="assets/1x/cycling_animation.webp">
+        
+            </div>
+
+            <div class="pedal2">
+                <img src="assets/1x/cycling_animation.webp">
+        
+            </div>
+
+        </div>
+    </div>
+
+   
 
     <div class="Draisine">
         <div class="Draisine_human">
@@ -414,9 +689,18 @@
 
     <div class="Dr_nul"></div>
 
+    <div class="Velocipede_pic">
+        <div class="Velocipede_pic2">
+
+            <img class="velocipede_human" src="assets/1x/velocipede.webp">
+            <img class="koleso5" src="assets/1x/koleso3.webp">
+            <img class="koleso6" src="assets/1x/koleso3.webp">
+        </div>
+    </div>
+
     <div class="Velocipede">
        
-       <h2>Velocipede 1860</h2>
+       <h2>Velocipede 1860s</h2>
        <p>
             In the 1860s, French inventors Pierre and Ernest Michaux developed the first pedal-powered bicycle, known as the Velocipede or “boneshaker.” The pedals were attached directly to the front wheel, and it was made of metal and wood. Due to the rough roads of the time, it earned the nickname “boneshaker” for its uncomfortable ride.
         </p>
@@ -459,25 +743,98 @@
 
         
     </div>
+    <div class="Penny-Farthing_bg">
+        <div class="Penny-Farthing_ruoho"></div>
+    </div>
 
-    <div class="Penny-Farthing">
-
+    <div class="PennyFarthing_text">
+        <h2>Penny Farthing 1870s</h2>
         <p>
             The 1870s saw the rise of the Penny-Farthing, a bicycle with a large front wheel and a much smaller rear wheel. Its design allowed for greater speeds, but it was unstable and difficult to mount and dismount, leading to frequent accidents. This design, though short-lived, became an iconic symbol of early cycling.</p>
         </p>
     </div>
+    
+    <div class= Safety_bicycle_h1>
+        <h1 class="Safety_bicycle">The Safety Bicycle 1885</h1>
+    </div>
+    <div class="Safety_bicycle">
+        <div class="Safety_bicycle_pic">
+            <img class="Safety_bicycle" src="assets/1x/The Safety Bicycle.webp">
+            <img class="koleso7" src="assets/1x/koleso7.webp">
+            <img class="koleso8" src="assets/1x/koleso7.webp">
+        </div>
+    </div>
 
-    <p>
-        Total energy use for bicycling- food, bicycle manufacture and sale, 
-        repaire and maintrnance, tires and bikeway truction - amounts to about 
-        1,300 Btu/mile. The comble figure for urban automobile travel is 11,000 Btu/passenger-mile
-        for trips of five miles or less. Thus a shift from cars to bicycles would save about 10,000 Btu/passenger-mile,
-        a 90% reduction from the energy use for automobiles. 
-        If 10 % of the urban auto travel conducted during daylight and in good weather for trips of five miles or less was shifted to 
-        bicycles, the savings in 1971 would have been 180 trillion Btu, 1.8% total urban automobile energy use. 
-    </p>
+    <div class="Safety_bicycle_text">
+        <p>
+            In 1885, English inventor John Kemp Starley introduced the Rover Safety Bicycle, which featured two equal-sized wheels and a chain drive to the rear wheel. This made cycling safer, more comfortable, and accessible to a broader population. The safety bicycle is considered the ancestor of the modern bicycle, with its revolutionary design leading to the decline of the high-wheeled Penny-Farthing. 
+        </p>
+    </div>
 
+    
+    <div class="tires_h1">
+        <h1>Pneumatic Tires 1888</h1>
+    </div>
 
+    <div class="tire_pic">
+        <div class="tire_pic1">
+            <img src="assets/1x/tire.webp" alt="">
+        </div>
+    </div>
 
-</body>
-</html>
+    <div class="tires_text">
+        <p>
+            In 1888, Scottish inventor John Boyd Dunlop developed the first practical pneumatic tire, filled with air to cushion the ride. This advancement dramatically improved comfort and performance, allowing cyclists to ride faster and more comfortably over uneven surfaces.   
+        </p>
+    </div>
+    <div class="posada_all">
+
+        
+        <div class="posada_kolesa1">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+        </div>
+        
+        <div class="posada">
+            <img src="assets/1x/posada-cyclists.webp" alt="">
+        </div>
+        
+        <div class="posada_kolesa2">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+        </div>
+        
+        <div class="posada_kolesa2">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+        </div>
+        
+        <div class="posada_kolesa2">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+        </div>
+        
+        
+        <div class="posada_kolesa3">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+            <img class="koleso9" src="assets/1x/small_koleso.webp">
+        </div>
+        
+    </div>
+        
+    </body>
+    </html>
